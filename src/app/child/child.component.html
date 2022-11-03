@@ -1,0 +1,9 @@
+<h1>Child Component</h1>
+
+<p *ngIf="userStatus">Welcome {{name}}</p>
+<p *ngIf="!userStatus">Please log in</p>
+
+<h3>Email = {{email}}</h3>
+
+<button (click)="getFromParent()">CallParent</button>
+

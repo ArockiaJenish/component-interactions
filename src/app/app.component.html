@@ -1,0 +1,22 @@
+<h1>Parent Component</h1>
+<input type="text" #nameRef [(ngModel)]="name">
+<p>Welcome {{name}}</p>
+
+<label for="email">Email:</label>
+<input type="text" [(ngModel)]="emailAddress">
+<p>Welcome {{emailAddress}}</p>
+
+
+<input type="text"  [(ngModel)]="customerName">
+<p>Welcome {{customerName}}</p>
+
+<p>From child department = {{child.department}}</p>
+<button (click)="child.childMethod()">getGreet</button>
+
+<button (click)="greetChild()">GreetChild</button>
+<button (click)="appreChild()">AppreciateChild</button>
+
+<app-child #child [email]="emailAddress" (greetEvent)="greetFromParent($event)" [userStatus]="userLogin" [userName]="customerName"></app-child>
+
+<app-child2></app-child2>
+<router-outlet></router-outlet>
